@@ -1,0 +1,44 @@
+[options]
+# font = monospace 9
+font = Fira Code 12
+
+[colors]
+
+# special
+foreground      = #ffffff
+foreground_bold = #ffffff
+cursor          = #ffffff
+background      = #212337
+
+# black
+color0  = #212337
+color8  = #d0d0d0
+
+# red
+color1  = #7af7ca
+color9  = #62cfa8
+
+# green
+color2  = #31d3e7
+color10 = #2ebfd1
+
+# yellow
+color3  = #ea3469
+color11 = #cf315f
+
+# blue
+color4  = #5139b8
+color12 = #4732a2
+
+# magenta
+color5  = #7af7ca
+color13 = #62cfa8
+
+# cyan
+color6  = #ea3469
+color14 = #cf315f
+
+# white
+color7  = #4732a2
+color15 = #ffffff
+

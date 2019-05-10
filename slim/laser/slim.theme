@@ -1,0 +1,30 @@
+# Laser theme by AFreidz
+
+# Messages (ie: shutdown)
+msg_color               #FFFFFF
+msg_font                Rubik:size=8:bold:dpi=75
+msg_x                   0
+msg_y                   0
+
+# valid values: stretch, tile
+background_style        center
+background_color        #5139B8
+
+# Input controls
+input_panel_x           50%
+input_panel_y           50%
+input_name_x            135
+input_name_y            317
+input_font          	  Rubik:size=35:bold:dpi=75
+input_color             #ffffff
+
+# Username / password request
+username_font          	Rubik Light:size=25:dpi=75
+username_color        	#ffffff
+username_x              0
+username_y              317
+password_x              0
+password_y              317
+
+username_msg            username:
+password_msg            password:
