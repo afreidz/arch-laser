@@ -3,7 +3,32 @@ local awful = require('awful')
 
 return function(modkey, dash)
   local global = gears.table.join(
-    
+    -- Tags
+    awful.key({ modkey }, '1', function ()
+      local screen = awful.screen.focused()
+      local tag = screen.tags[1]
+      if tag then tag:view_only() end
+    end, { description = 'focus terminal tag', group = 'tag' }),
+
+    awful.key({ modkey }, '2', function ()
+      local screen = awful.screen.focused()
+      local tag = screen.tags[2]
+      if tag then tag:view_only() end
+    end, { description = 'focus web tag', group = 'tag' }),
+
+    awful.key({ modkey }, '3', function ()
+      local screen = awful.screen.focused()
+      local tag = screen.tags[3]
+      if tag then tag:view_only() end
+    end, { description = 'focus code tag', group = 'tag' }),
+
+    awful.key({ modkey }, '4', function ()
+      local screen = awful.screen.focused()
+      local tag = screen.tags[4]
+      if tag then tag:view_only() end
+    end, { description = 'focus media tag', group = 'tag' }),
+
+
     -- Focus
     awful.key({ modkey, 'Alt'}, 'Right', function ()
       awful.client.focus.byidx(1)
@@ -100,28 +125,5 @@ return function(modkey, dash)
       awful.tag.incncol(-1, nil, true)
     end, { description = 'decrease number of columns', group = 'layout' })
   )
-
-  -- NOT WORKING
-  for screen = 1, 4 do
-    global = gears.table.join(global,
-      awful.key({ modkey }, '#' .. screen + 4, function ()
-        local screen = awful.screen.focused()
-        local tag = screen.tags[screen]
-        if tag then
-          tag:view_only()
-        end
-      end, { description = 'move to tag #' ..screen, group = 'tag' }),
-
-      awful.key({ modkey, 'Shift' }, '#' .. screen + 4, function (client)
-        if client.focus then
-          local tag = client.focus.screen.tags[i]
-          if tag then
-            client.focus:move_to_tag(tag)
-          end
-        end
-      end, { description = 'move focused client to tag #'..screen, group = 'tag' })
-    )
-  end
-
   return global
 end
